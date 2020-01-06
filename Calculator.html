@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="Calculator.css">
+	<script type="text/javascript" src="Calculator.js"></script>
+
+</head>
+<body>
+	<script type="text/javascript" src="Calculator.js"></script>
+
+	<div class="calculator">
+		<div class="display" id="calculator_display" value=0>0</div>
+
+		<div class='keys'>
+	
+			<!--
+			Creates all of the buttons and assigns their values which will be used in the js applications.
+
+			Assigns classes to the non-number buttons to allow for different styling and ability to reference within js. 
+
+			Calls all the needded functions for each respective button 
+
+			-->
+			<button type="button" class="operator" onclick="operatorKey(this.value)"  value="+">+</button>
+			<button type="button" class="operator" onclick="operatorKey(this.value)"  value="-">-</button>
+			<button type="button" class="operator" onclick="operatorKey(this.value)"  value="*">&times;</button>
+			<button type="button" class="operator" onclick="operatorKey(this.value)" value="/">&divide;</button>
+
+			<button type="button" onclick="numberKey(this.value)" value="1">1</button>
+			<button type="button" onclick="numberKey(this.value)" value="2">2</button>
+			<button type="button" onclick="numberKey(this.value)" value="3">3</button>
+			<button type="button" onclick="numberKey(this.value)" value="4">4</button>
+			<button type="button" onclick="numberKey(this.value)" value="5">5</button>
+			<button type="button" onclick="numberKey(this.value)" value="6">6</button>
+			<button type="button" onclick="numberKey(this.value)" value="7">7</button>
+			<button type="button" onclick="numberKey(this.value)" value="8">8</button>
+			<button type="button" onclick="numberKey(this.value)" value="9">9</button>
+			<button type="button" onclick="numberKey(this.value)" value="0">0</button>
+		
+			
+			<button type="button" class="decimal" onclick="decimalKey()" value=".">.</button>
+			<button type="button" class="calculate" onclick="calculateKey()" value="=">=</button>
+			<button type="button" class="delete" onclick="deleteKey()" value="delete">Delete</button>
+			<button type="button" class="clearall" onclick="clearallKey()" value="clearall">AC</button>
+
+		</div>
+	</div>
+
+</body>
+</html>
+

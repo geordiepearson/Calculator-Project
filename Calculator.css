@@ -1,0 +1,100 @@
+/*
+Sets default settings for the html file
+*/
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;/*Ensures padding and border of element don't increase size*/
+}
+
+*, *::before, *::after{
+	margin:0;
+	padding:0;
+	box-sizing:inherit;/*resets the box size to border-box, allows easier adjustment/modification*/
+}
+
+/*
+Sets 
+*/
+.calculator{
+	border:1px solid black;
+	border-radius:5px;/*Causes border to curve at edges*/
+	position: absolute;/*Causes border to surrond only calculator*/
+	/*Sets top left corner of calculator to centre of screen*/
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);/*Translates calculator up and to left by 50% of its size, centers it*/
+	width:300px;
+}
+
+.display{
+	width:100%;
+	background-color:black;
+	color:white;
+	text-align:right;
+	padding-right:10px;
+	padding-left:10px;
+	font-size:4rem;/*Sets font size to 4x default size*/
+}
+
+ button{
+	height:50px;
+	background-color:white;
+	color:black; 
+	border:1px solid black;
+	border-radius: 4px;
+	font-size: 2rem
+}
+
+button:hover {
+	background-color:#e5e4e2; 
+}
+
+.operator{
+	color:blue;
+}
+
+.calculate{
+	color:white;
+	background-color:blue;
+	border-color:blue;
+	grid-row-start: 5;/*Sets the start of the button at row 5*/
+	grid-row-end:6;/*Sets the end of the button at row 6*/
+	grid-column-start:1;/*Sets the start of the button at column 1*/
+	grid-column-end: 3;/*Sets the start of the end at column 3*/
+}
+
+.calculate:hover{
+	background-color:#4d4dff; 
+}
+
+.delete{
+	color:white;
+	background-color:red; 
+	border-color:red;
+}
+
+.delete:hover{
+	background-color:#FA8072;
+}
+
+.clearall{
+	color:white;
+	background-color:red; 
+	border-color:red;
+	grid-row-start: 5;
+	grid-row-end:6;
+	grid-column-start:3;
+	grid-column-end: 5;
+}
+
+.clearall:hover{
+	background-color:#FA8072;
+}
+
+.keys{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	grid-column-gap:10px;
+	grid-row-gap:10px; 
+}
